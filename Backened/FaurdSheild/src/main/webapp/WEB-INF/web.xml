@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>FaurdSheild</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.xhtml</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <servlet-class>RegisterServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>AccountDetailsServlet</servlet-name>
+  <servlet-class>AccountDetailsServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>AccountDetailsServlet</servlet-name>
+  <url-pattern>/AccountDetailsServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>TransactionServlet</servlet-name>
+  <servlet-class>TransactionServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>TransactionServlet</servlet-name>
+  <url-pattern>/TransactionServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TransactionHistoryServlet</servlet-name>
+    <servlet-class>TransactionHistoryServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TransactionHistoryServlet</servlet-name>
+    <url-pattern>/TransactionHistoryServlet</url-pattern>
+</servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>CustomerAlertServlet</servlet-name>
+    <servlet-class>CustomerAlertServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CustomerAlertServlet</servlet-name>
+    <url-pattern>/CustomerAlertServlet</url-pattern>
+</servlet-mapping>
+  
+  
+  
+  
+</web-app>

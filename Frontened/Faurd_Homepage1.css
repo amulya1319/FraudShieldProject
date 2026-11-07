@@ -1,0 +1,445 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f8ff;
+    color: #10264a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+
+header {
+    background: #061c40;
+    color: white;
+    padding: 18px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #20baff;
+}
+
+.logo span {
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #20baff;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 25px;
+    margin-left: 8px;
+}
+
+.login {
+    color: white;
+    border: 1px solid #20baff;
+}
+
+.register {
+    background: #087cf0;
+    color: white;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 420px;
+    padding: 65px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: linear-gradient(120deg, #eaf3ff, #b8d9ff);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #0869e8;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.start-btn {
+    background: #0869e8;
+    color: white;
+}
+
+.learn-btn {
+    border: 2px solid #0869e8;
+    color: #0869e8;
+}
+
+/* Credit Card */
+
+.hero-image {
+    width: 42%;
+    min-width: 280px;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-card {
+    width: 350px;
+    height: 215px;
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #063b82,
+        #087df5,
+        #061c40
+    );
+    box-shadow: 0 15px 35px rgba(0, 70, 160, 0.35);
+    transform: rotate(-7deg);
+    position: relative;
+    overflow: hidden;
+}
+
+.bank-card h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.bank-card h2 span {
+    color: #39d3ff;
+}
+
+.card-chip {
+    font-size: 38px;
+    color: #ffd978;
+    margin-bottom: 12px;
+}
+
+.card-number {
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card-bottom .visa {
+    font-size: 25px;
+    font-style: italic;
+}
+
+.card-glow {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    right: -35px;
+    top: -35px;
+}
+
+/* Services Section */
+
+.services {
+    padding: 45px 4%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 28px 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px #dce8f7;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+.service-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #075bc4;
+}
+
+.service-card p {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Why Choose Us */
+
+.why-us {
+    padding: 55px 5%;
+    background: white;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.why-us > p {
+    color: #64748b;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.benefit {
+    padding: 20px;
+}
+
+.benefit .icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.benefit h3 {
+    font-size: 17px;
+}
+
+/* About and Security Sections */
+
+.info-section {
+    padding: 60px 5%;
+    text-align: center;
+    background: #f4f8ff;
+    scroll-margin-top: 20px;
+}
+
+.info-section h2 {
+    font-size: 32px;
+    color: #075bc4;
+    margin-bottom: 20px;
+}
+
+.info-section > p {
+    max-width: 800px;
+    margin: 12px auto;
+    line-height: 1.7;
+    color: #64748b;
+    font-size: 17px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.info-cards div {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px #dce8f7;
+}
+
+.info-cards h3 {
+    color: #075bc4;
+    margin-bottom: 15px;
+}
+
+.info-cards p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+
+.contact-section {
+    background: white;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.contact-details div {
+    background: #f0f6ff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #dce8f7;
+}
+
+.contact-details h3 {
+    color: #075bc4;
+    margin-bottom: 15px;
+}
+
+.contact-details p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    background: #061c40;
+    color: white;
+    padding: 30px 5%;
+    text-align: center;
+}
+
+footer h2 {
+    color: #20baff;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #cbd5e1;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
+
+footer a:hover {
+    color: #20baff;
+}
+
+/* Responsive Design */
+
+@media (max-width: 850px) {
+
+    header {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-cards,
+    .contact-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .service-container,
+    .benefits,
+    .info-cards,
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-buttons {
+        text-align: center;
+    }
+
+    .bank-card {
+        width: 290px;
+        height: 190px;
+    }
+}

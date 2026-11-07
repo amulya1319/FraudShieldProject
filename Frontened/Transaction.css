@@ -1,0 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7fc;
+    color: #263445;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #123c69;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #ffd166;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    color: #123c69;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #667085;
+}
+
+/* Transaction card */
+.transaction-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.transaction-card h2 {
+    color: #123c69;
+    margin-bottom: 25px;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1769aa;
+    box-shadow: 0 0 4px rgba(23, 105, 170, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Error messages */
+.field-error {
+    display: block;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 6px;
+    min-height: 16px;
+    font-weight: normal;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #1769aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #123c69;
+}
+
+/* Result message */
+.result-message {
+    margin-top: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-top: 22px;
+    color: #1769aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile design */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .transaction-card {
+        padding: 20px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}

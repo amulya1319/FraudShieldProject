@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Transaction | FraudShield</title>
+    <link rel="stylesheet" href="Transaction.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">FraudShield</div>
+
+    <nav>
+        <a href="CustomerDashboard.html">Dashboard</a>
+        <a href="AccountDetails.html">My Account</a>
+        <a href="Transaction.html" class="active">Transactions</a>
+        <a href="CustomerAlerts.html">Security Alerts</a>
+        <a href="Login.html" id="logoutLink">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="heading">
+        <h1>Make a Transaction</h1>
+        <p>Enter transaction details for security monitoring.</p>
+    </div>
+
+    <section class="transaction-card">
+
+        <h2>Transaction Details</h2>
+
+        <form id="transactionForm"
+              action="http://localhost:8080/FaurdSheild/TransactionServlet"
+              method="post">
+
+            <div class="form-group">
+                <label for="email">Registered Email</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter registered email"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="accountNumber">Sender Account Number</label>
+                <input type="text"
+                       id="accountNumber"
+                       name="accountNumber"
+                       placeholder="Enter 11-digit demo account number"
+                       maxlength="11"
+                       inputmode="numeric"
+                       required>
+                <small id="accountError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="recipient">Recipient Name</label>
+                <input type="text"
+                       id="recipient"
+                       name="recipient"
+                       placeholder="Enter recipient name"
+                       required>
+                <small id="recipientError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="recipientAccount">Recipient Account Number</label>
+                <input type="text"
+                       id="recipientAccount"
+                       name="receiverAccount"
+                       placeholder="Enter recipient account number"
+                       maxlength="11"
+                       inputmode="numeric"
+                       required>
+                <small id="recipientAccountError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Transaction Amount (₹)</label>
+                <input type="number"
+                       id="amount"
+                       name="amount"
+                       placeholder="Enter amount"
+                       min="1"
+                       step="0.01"
+                       required>
+                <small id="amountError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="transactionType">Transaction Type</label>
+                <select id="transactionType"
+                        name="transactionType"
+                        required>
+                    <option value="">Select transaction type</option>
+                    <option value="UPI">UPI</option>
+                    <option value="NEFT">Googlepay</option>
+                    <option value="IMPS">paytm</option>
+                    
+                </select>
+                <small id="typeError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description"
+                          name="description"
+                          placeholder="Enter transaction description"
+                          rows="3"></textarea>
+            </div>
+
+            <button type="submit">Submit Transaction</button>
+
+        </form>
+
+        <div id="resultMessage"
+             class="result-message"
+             aria-live="polite"></div>
+
+    </section>
+
+    <a href="CustomerDashboard.html" class="back-link">
+        ← Back to Dashboard
+    </a>
+
+</main>
+
+<script src="Transaction.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History | FraudShield</title>
+    <link rel="stylesheet" href="TransactionHistory.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">FraudShield</div>
+
+    <nav>
+        <a href="CustomerDashboard.html">Dashboard</a>
+        <a href="AccountDetails.html">My Account</a>
+        <a href="Transaction.html">Transactions</a>
+        <a href="CustomerAlerts.html">Security Alerts</a>
+        <a href="Login.html" id="logoutLink">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="heading">
+        <h1>Transaction History</h1>
+        <p>View and search your previous transactions.</p>
+    </section>
+
+    <!-- Search using Account Number -->
+    <form action="http://localhost:8080/FaurdSheild/TransactionHistoryServlet"
+          method="post">
+
+        <label>Account Number</label>
+
+        <input type="text"
+               name="accountNumber"
+               placeholder="Enter your account number"
+               maxlength="11"
+               required>
+
+        <button type="submit">View Transaction History</button>
+
+    </form>
+
+    <section class="summary">
+        <div class="summary-card">
+            <h3>Total Transactions</h3>
+            <p id="totalTransactions">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Successful</h3>
+            <p id="successfulTransactions">0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Under Review</h3>
+            <p id="reviewTransactions">0</p>
+        </div>
+    </section>
+
+    <section class="history-card">
+
+        <div class="history-header">
+            <h2>Recent Transactions</h2>
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search by ID or recipient...">
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Recipient</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="transactionTable">
+                    <!-- Database records will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+
+        <p id="noResults" class="no-results">
+            No transactions found.
+        </p>
+
+    </section>
+
+    <a href="CustomerDashboard.html" class="back-link">
+        ← Back to Dashboard
+    </a>
+
+</main>
+
+<script src="TransactionHistory.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f8ff;
+    color: #10264a;
+}
+
+/* Navigation Bar */
+
+header {
+    background: #061c40;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #20baff;
+}
+
+.logo span {
+    color: white;
+}
+
+.home-btn {
+    background: #087cf0;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+/* Registration Section */
+
+.register-section {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+    background: linear-gradient(120deg, #eaf3ff, #b8d9ff);
+}
+
+/* Registration Container */
+
+.register-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 50, 120, 0.15);
+    text-align: center;
+}
+
+.register-icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.register-container h1 {
+    color: #075bc4;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* Form Rows */
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .input-group {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Input Fields */
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #087cf0;
+    box-shadow: 0 0 5px rgba(8, 124, 240, 0.2);
+}
+
+/* Terms and Conditions */
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.terms input {
+    accent-color: #087cf0;
+}
+
+/* Register Button */
+
+.register-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #087cf0;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background: #061c40;
+}
+
+/* Login Link */
+
+.login-link {
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #087cf0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #075bc4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    background: #061c40;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 550px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .register-container {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

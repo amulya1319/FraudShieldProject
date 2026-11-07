@@ -1,0 +1,15 @@
+
+# Java compiled files
+*.class
+build/
+bin/
+target/
+
+# Eclipse workspace files
+.metadata/
+
+# Logs
+*.log
+
+# Private configuration
+.env

@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudShield | Customer Dashboard</title>
+    <link rel="stylesheet" href="CustomerDashboard.css">
+</head>
+<body>
+    
+
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Fraud<span>Shield</span></div>
+
+        <nav>
+            <a href="CustomerDashboard.html" class="active">Dashboard</a>
+           <a href="AccountDetails.html">My Account</a>
+            <a href="#transactions">Transactions</a>
+            <a href="#alerts">Security Alerts</a>
+            <a href="AccountDetails.html" class="action-card"></a>
+            <a href="Transaction.html">Make Transaction</a>
+            <a href="TransactionHistory.html">Transaction History</a>
+            <a href="CustomerAlerts.html">View Security Alerts</a>
+        </nav>
+
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div>
+                <h1>Welcome, Customer!</h1>
+                <p>Welcome to your FraudShield banking dashboard.</p>
+            </div>
+            <div class="welcome-icon">🛡️</div>
+        </section>
+
+        <!-- Account Summary -->
+        <section id="account">
+            <h2>Account Overview</h2>
+
+            <div class="summary-cards">
+
+                <div class="summary-card balance-card">
+                    <div class="card-icon">💰</div>
+                    <h3>Available Balance</h3>
+                    <h2>₹ 45,000.00</h2>
+                    <p>Demo balance</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="card-icon">🏦</div>
+                    <h3>Account Number</h3>
+                    <h2>XXXXXX12345</h2>
+                    <p>Demo account</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Account Status</h3>
+                    <h2 class="status-active">Active</h2>
+                    <p>Demo account status</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Total Transactions</h3>
+                    <h2>24</h2>
+                    <p>Demo transaction count</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+
+            <div class="action-cards">
+
+                <a href="Transaction.html" class="action-card">
+                    <span>💳</span>
+                    <h3>Make Transaction</h3>
+                    <p>Enter a new demo transaction</p>
+                </a>
+
+                <a href="TransactionHistory.html" class="action-card">
+                    <span>📋</span>
+                    <h3>Transaction History</h3>
+                    <p>View your previous transactions</p>
+                </a>
+
+                <a href="#alerts" class="action-card">
+                    <span>🔔</span>
+                    <h3>View Alerts</h3>
+                    <p>Check your security alerts</p>
+                </a>
+
+                <a href="AccountDetails.html" class="action-card">
+                    <span>👤</span>
+                    <h3>Account Details</h3>
+                    <p>View your account information</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Recent Transactions -->
+        <section id="transactions" class="transactions-section">
+
+            <div class="section-heading">
+                <h2>Recent Transactions</h2>
+                <a href="TransactionHistory.html">View All</a>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>TXN1001</td>
+                            <td>Shopping</td>
+                            <td>02-11-2026</td>
+                            <td>₹2,500</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>TXN1002</td>
+                            <td>Food Payment</td>
+                            <td>01-11-2026</td>
+                            <td>₹500</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>TXN1003</td>
+                            <td>Online Payment</td>
+                            <td>31-10-2026</td>
+                            <td>₹8,000</td>
+                            <td><span class="pending">Under Review</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Security Alerts -->
+        <section id="alerts" class="alerts-section">
+            <h2>Security Alerts</h2>
+
+            <div class="alert-card warning-alert">
+                <span class="alert-icon">⚠️</span>
+                <div>
+                    <h3>Unusual Transaction Detected</h3>
+                    <p>A demo transaction has been flagged for review.</p>
+                    <small>02 November 2026</small>
+                </div>
+            </div>
+
+            <div class="alert-card success-alert">
+                <span class="alert-icon">🔐</span>
+                <div>
+                    <h3>Account Security</h3>
+                    <p>Your demo account security status is active.</p>
+                    <small>01 November 2026</small>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 FraudShield. All Rights Reserved.</p>
+        <p>Intelligent Banking Fraud Detection & Transaction Monitoring System</p>
+    </footer>
+
+    <script src="CustomerDashboard.js"></script>
+    
+</body>
+</html>

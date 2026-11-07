@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FraudShield - Registration</title>
+
+    <link rel="stylesheet" href="Register.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <div class="logo">
+            🛡 Fraud<span>Shield</span>
+        </div>
+
+        <a href="Faurd_Homepage.html" class="home-btn">Back to Home</a>
+
+    </header>
+
+
+    <!-- Registration Section -->
+    <section class="register-section">
+
+        <div class="register-container">
+
+            <div class="register-icon">👤</div>
+
+            <h1>Create Account</h1>
+
+            <p class="subtitle">
+                Join FraudShield and get started
+            </p>
+
+
+            <!-- Registration Form -->
+                 <form action="http://localhost:8080/FaurdSheild/RegisterServlet" method="post">
+                <form id="registerForm" action="#" method="post">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label for="firstName">First Name</label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="Enter first name"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lastName">Last Name</label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Enter last name"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label for="age">Age</label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            placeholder="Enter age"
+                            min="19"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="gender">Gender</label>
+
+                        <select id="gender" name="gender" required>
+
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="accountNumber">
+                         Bank Account Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="accountNumber"
+                        name="accountNumber"
+                        placeholder="Enter 11-digit demo account number"
+                        pattern="[0-9]{11}"
+                        maxlength="11"
+                        inputmode="numeric"
+                        title="Enter exactly 11 digits"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="address">Address</label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="3"
+                        placeholder="Enter your address"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                    >
+
+                    <label for="terms">
+                        I agree to the Terms and Conditions
+                    </label>
+
+                </div>
+
+
+                <button type="submit" class="register-button">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p class="login-link">
+                Already have an account?
+                <a href="login.html">Login Now</a>
+            </p>
+
+
+            <a href="index.html" class="back-link">
+                ← Back to Homepage
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 FraudShield. Educational Project Demo.
+        </p>
+
+    </footer>
+    <script src="Register.js"></script>
+
+</body>
+
+</html>

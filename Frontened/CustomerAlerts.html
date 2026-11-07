@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Alerts | FraudShield</title>
+    <link rel="stylesheet" href="CustomerAlerts.css">
+</head>
+<body>
+
+    <form action="http://localhost:8080/FaurdSheild/CustomerAlertServlet"
+      method="post">
+
+    <label>Enter Account Number</label>
+
+    <input type="text"
+           name="accountNumber"
+           placeholder="Enter your account number"
+           maxlength="11"
+           required>
+
+    <button type="submit">View My Alerts</button>
+
+</form>
+
+<header class="navbar">
+    <div class="logo">FraudShield</div>
+
+    <nav>
+        <a href="CustomerDashboard.html">Dashboard</a>
+        <a href="AccountDetails.html">My Account</a>
+        <a href="Transaction.html">Transactions</a>
+        <a href="CustomerAlerts.html" class="active">Security Alerts</a>
+        <a href="Login.html" id="logoutLink">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="heading">
+        <h1>Security Alerts</h1>
+        <p>Monitor important notifications about your transactions.</p>
+    </section>
+
+    <section class="summary">
+
+        <div class="summary-card">
+            <h3>Total Alerts</h3>
+            <p id="totalAlerts">4</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>New Alerts</h3>
+            <p id="newAlerts">2</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Under Review</h3>
+            <p id="reviewAlerts">1</p>
+        </div>
+
+    </section>
+
+    <section class="alerts-section">
+
+        <div class="section-header">
+            <h2>Your Recent Alerts</h2>
+
+            <select id="riskFilter">
+                <option value="all">All Risk Levels</option>
+                <option value="high">High Risk</option>
+                <option value="medium">Medium Risk</option>
+                <option value="low">Low Risk</option>
+            </select>
+        </div>
+
+        <div class="alert-list" id="alertList">
+
+            <div class="alert-card" data-risk="high">
+                <div class="alert-top">
+                    <h3>Unusual Transaction Detected</h3>
+                    <span class="risk high">High Risk</span>
+                </div>
+
+                <p><strong>Alert ID:</strong> ALT1001</p>
+                <p><strong>Transaction ID:</strong> TXN1002</p>
+                <p class="message">
+                    A transaction was flagged because its amount
+                    exceeded the demo monitoring threshold.
+                </p>
+                <div class="alert-bottom">
+                    <span>Date: 01-11-2026</span>
+                    <span class="status new">New</span>
+                </div>
+            </div>
+
+            <div class="alert-card" data-risk="medium">
+                <div class="alert-top">
+                    <h3>Unusual Transaction Time</h3>
+                    <span class="risk medium">Medium Risk</span>
+                </div>
+
+                <p><strong>Alert ID:</strong> ALT1002</p>
+                <p><strong>Transaction ID:</strong> TXN1005</p>
+                <p class="message">
+                    A transaction was flagged because it matched
+                    the demo unusual-time monitoring rule.
+                </p>
+                <div class="alert-bottom">
+                    <span>Date: 01-11-2026</span>
+                    <span class="status review">Under Review</span>
+                </div>
+            </div>
+
+            <div class="alert-card" data-risk="low">
+                <div class="alert-top">
+                    <h3>Multiple Transactions Detected</h3>
+                    <span class="risk low">Low Risk</span>
+                </div>
+
+                <p><strong>Alert ID:</strong> ALT1003</p>
+                <p><strong>Transaction ID:</strong> TXN1006</p>
+                <p class="message">
+                    Multiple transactions were detected within
+                    a short period in this demo.
+                </p>
+                <div class="alert-bottom">
+                    <span>Date: 02-11-2026</span>
+                    <span class="status resolved">Resolved</span>
+                </div>
+            </div>
+
+            <div class="alert-card" data-risk="high">
+                <div class="alert-top">
+                    <h3>Unusual Transaction Pattern</h3>
+                    <span class="risk high">High Risk</span>
+                </div>
+
+                <p><strong>Alert ID:</strong> ALT1004</p>
+                <p><strong>Transaction ID:</strong> TXN1007</p>
+                <p class="message">
+                    This transaction matched another predefined
+                    demo monitoring rule.
+                </p>
+                <div class="alert-bottom">
+                    <span>Date: 02-11-2026</span>
+                    <span class="status new">New</span>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="noAlerts" class="no-alerts">
+            No alerts found for this risk level.
+        </p>
+
+    </section>
+
+    <a href="CustomerDashboard.html" class="back-link">
+        ← Back to Dashboard
+    </a>
+
+</main>
+
+<script src="CustomerAlerts.js"></script>
+</body>
+</html>
